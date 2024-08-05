@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.MainMenu">
+   <children>
+      <ImageView fx:id="background" fitHeight="1000.0" fitWidth="1800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/308791.jpg" />
+         </image>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </ImageView>
+      <HBox alignment="CENTER">
+         <children>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/image-removebg-preview.png" />
+               </image>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <StackPane.margin>
+            <Insets bottom="200.0" />
+         </StackPane.margin>
+      </HBox>
+      <BorderPane>
+         <left>
+            <VBox BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="20.0" />
+               </padding>
+               <children>
+                  <ImageView fx:id="logout" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true" styleClass="expand">
+                  <!-- <ImageView fx:id="logout" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="expand"> -->
+                     <image>
+                        <Image url="@img/logout.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="3.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="40.0" onMouseClicked="#toSetting" pickOnBounds="true" preserveRatio="true" styleClass="expand">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@img/settings.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="80.0" onMouseClicked="#toShop" pickOnBounds="true" preserveRatio="true" styleClass="expand">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@img/cart.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="120.0" onMouseClicked="#toHistory" pickOnBounds="true" preserveRatio="true" styleClass="expand">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@img/history.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane fx:id="profileHolder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#toProfile" prefHeight="82.5" prefWidth="82.5" style="-fx-border-color: red; -fx-border-width: 2;" styleClass="expand">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <image>
+                              <Image url="@img/kek.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </StackPane>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <HBox fx:id="hbox1">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/star.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Label fx:id="levelLabel" text="500" textFill="#57c188">
+                                       <font>
+                                          <Font name="System Bold Italic" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox fx:id="hbox2">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/health.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Label fx:id="hpLabel" text="500" textFill="YELLOW">
+                                       <font>
+                                          <Font name="System Bold Italic" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Region style="-fx-border-width: 1.2; -fx-border-color: pink;" VBox.vgrow="NEVER">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Region>
+                        <HBox>
+                           <children>
+                              <HBox fx:id="hbox3">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/dollar.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Label fx:id="coinsLabel" text="500" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold Italic" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox fx:id="hbox4" layoutX="10.0" layoutY="10.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/level.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Region HBox.hgrow="ALWAYS" />
+                                    <Label text="500" textFill="#66b8de" fx:id="xpLabel">
+                                       <font>
+                                          <Font name="System Bold Italic" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+         </right>
+      </BorderPane>
+      <VBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0">
+         <children>
+            <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" onMouseClicked="#toLobby" prefWidth="300.0" style="-fx-background-color: aqua; -fx-background-radius: 30;" styleClass="expand">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/play.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Two Player" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="7.0" top="7.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="300.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox fx:id="settingBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="346.0">
+         <children>
+            <VBox>
+               <children>
+                  <StackPane fx:id="changeBackg" onMouseClicked="#changeBackg" style="-fx-background-color: grey; -fx-background-radius: 5;" styleClass="setting-pane">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/background.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </StackPane>
+                  <StackPane fx:id="changeMusic" layoutX="210.0" layoutY="210.0" onMouseClicked="#changeMusic" style="-fx-background-color: #505050; -fx-background-radius: 5;" styleClass="setting-pane">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/musical-note.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </StackPane>
+                  <StackPane fx:id="changeVolume" layoutX="210.0" layoutY="256.0" onMouseClicked="#changeVolume" style="-fx-background-color: #505050; -fx-background-radius: 5;" styleClass="setting-pane">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/volume.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </StackPane>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: grey; -fx-background-radius: 15;">
+               <children>
+                  <VBox fx:id="backgHolder" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="20.0">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <StackPane onMouseClicked="#dayBackg">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/day.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Day" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <StackPane onMouseClicked="#nightBackg">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/night.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Night" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="musicHolder" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="20.0">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <StackPane onMouseClicked="#playOne">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/day.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Nerv" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#playTwo">
+                           <children>
+                              <StackPane onMouseClicked="#nightBackg">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/night.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label text="Parandeh" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="volumeHolder" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="20.0">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fx:id="speaker" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/volume.png" />
+                                 </image>
+                              </ImageView>
+                              <Slider fx:id="slider" blockIncrement="1.0" showTickLabels="true" showTickMarks="true" value="100.0">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="20.0" />
+                                 </HBox.margin>
+                              </Slider>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <VBox layoutX="10.0" layoutY="10.0">
+               <children>
+                  <StackPane onMouseClicked="#toSetting" style="-fx-background-color: grey; -fx-background-radius: 5;">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/close.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </StackPane>
+               </children>
+               <padding>
+                  <Insets top="117.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</StackPane>

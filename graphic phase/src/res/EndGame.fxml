@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" focusTraversable="false" pannable="true" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.EndGameMenu">
+   <content>
+      <StackPane fx:id="root" focusTraversable="true" styleClass="stack-pane-background">
+         <padding>
+            <Insets bottom="32.0" top="32.0" />
+         </padding>
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true" styleClass="expand">
+                           <image>
+                              <Image url="@img/home.png" />
+                           </image>
+                        </ImageView>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="60.0" layoutY="10.0" onMouseClicked="#replay" pickOnBounds="true" preserveRatio="true" styleClass="expand">
+                           <image>
+                              <Image url="@img/replay.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" left="50.0" right="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="950.0" prefWidth="500.0" style="-fx-background-color: #1db74f; -fx-background-radius: 15;">
+                           <children>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Label fx:id="winnerLabel" text="Player one charcter" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/gold.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="35.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Region maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" style="-fx-border-color: #FFFFFF; -fx-border-color: rgba(96, 95, 96, 0.8); -fx-border-width: 0.4;">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Region>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@img/header_holder.png" />
+                                             </image>
+                                          </ImageView>
+                                          <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0">
+                                             <children>
+                                                <Label fx:id="wXPLabel" text="Label">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@img/header_holder.png" />
+                                             </image>
+                                          </ImageView>
+                                          <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0">
+                                             <children>
+                                                <Label fx:id="wLvLabel" text="Label">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox fx:id="wLevelHBox" alignment="CENTER" layoutX="10.0" layoutY="221.0">
+                                 <children>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@img/header_holder.png" />
+                                             </image>
+                                          </ImageView>
+                                          <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0">
+                                             <children>
+                                                <Label fx:id="wLevelup" text="Label">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox fx:id="wGiftHBox" alignment="CENTER" layoutX="10.0" layoutY="261.0">
+                                 <children>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@img/header_holder.png" />
+                                             </image>
+                                          </ImageView>
+                                          <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0">
+                                             <children>
+                                                <Label fx:id="wGift" text="Label">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="32.0" top="32.0" />
+                           </padding>
+                        </VBox>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <VBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="950.0" prefWidth="500.0" style="-fx-background-color: #cc3636; -fx-background-radius: 15;">
+                           <children>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Label fx:id="loserLabel" text="Player two charcter" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="42.8" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets top="35.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Region maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0" style="-fx-border-color: #FFFFFF; -fx-border-color: rgba(96, 95, 96, 0.8); -fx-border-width: 0.4;">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Region>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@img/info_holder.png" />
+                                             </image>
+                                          </ImageView>
+                                          <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0">
+                                             <children>
+                                                <Label fx:id="lXPLabel" text="Label">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="161.0">
+                                 <children>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@img/info_holder.png" />
+                                             </image>
+                                          </ImageView>
+                                          <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0">
+                                             <children>
+                                                <Label fx:id="lLvLabel" text="Label">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox fx:id="lLevelHBox" alignment="CENTER">
+                                 <children>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@img/info_holder.png" />
+                                             </image>
+                                          </ImageView>
+                                          <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0">
+                                             <children>
+                                                <Label fx:id="lLevelup" text="Label">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox fx:id="lGiftHBox" alignment="CENTER">
+                                 <children>
+                                    <StackPane>
+                                       <children>
+                                          <ImageView fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@img/info_holder.png" />
+                                             </image>
+                                          </ImageView>
+                                          <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="400.0">
+                                             <children>
+                                                <Label fx:id="lGift" text="Label">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="32.0" top="32.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </content>
+</ScrollPane>

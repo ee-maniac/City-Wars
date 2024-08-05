@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="gameArea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.GameController">
+    <HBox fx:id="roundNumberContainer" alignment="CENTER">
+        <Label fx:id="roundNumber"/>
+    </HBox>
+    
+    <VBox fx:id="player1Area" styleClass="player-area">
+        <Label fx:id="player1username" styleClass="player-label"/>
+        <Label fx:id="player1LHP" text="Score: 0" styleClass="score-label"/>
+        <HBox fx:id="player1HandUI" styleClass="hand"/>
+        <HBox fx:id="playerGameBoard" styleClass="board">
+        <VBox alignment="CENTER" styleClass="side-container">
+        <Label fx:id="player1LT" styleClass="leftTurns-label" />
+        </VBox>
+        <Region fx:id="spacer2" HBox.hgrow="ALWAYS"/>
+        <HBox fx:id="player1BoardUI" styleClass="board" prefHeight="160" minHeight="160" maxHeight="160" VBox.vgrow="NEVER"/>
+        <Region fx:id="spacer2" HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER" styleClass="side-container">
+        <Label fx:id="player1ScoreLabel" styleClass="leftHP-label" />
+        </VBox>
+        </HBox>
+    </VBox>
+    
+    <VBox fx:id="player2Area" styleClass="player-area">
+        <HBox fx:id="playerGameBoard" styleClass="board">
+        <VBox alignment="CENTER" styleClass="side-container">
+        <Label fx:id="player2LT" styleClass="leftTurns-label" />
+        </VBox>
+        <Region fx:id="spacer2" HBox.hgrow="ALWAYS"/>
+        <HBox fx:id="player2BoardUI" styleClass="board" prefHeight="160" minHeight="160" maxHeight="160" VBox.vgrow="NEVER"/>
+        <Region fx:id="spacer2" HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER" styleClass="side-container">
+        <Label fx:id="player2ScoreLabel" styleClass="leftHP-label" />
+        </VBox>
+        </HBox>
+        <HBox fx:id="player2HandUI" styleClass="hand" />
+        <Label fx:id="player2username" styleClass="player-label"/>
+        <Label fx:id="player2LHP" text="Score: 0" styleClass="score-label"/>
+    </VBox>
+</VBox>

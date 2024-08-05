@@ -1,0 +1,41 @@
+.text-field:hover {
+    -fx-border-color: #FFFFFF !important;
+}
+.text-field {
+    -fx-text-fill: white !important;
+}
+.button:hover {
+    -fx-text-fill: white !important;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.combo-box {
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-font-size: 16;
+    -fx-prompt-text-fill:  rgba(96, 95, 96, 0.8);
+}
+.link-label {
+    -fx-text-fill: white;
+}
+.link-label:hover {
+    -fx-cursor: hand;
+    -fx-text-fill: #1ed760;
+    -fx-underline: true;
+}
+.stack-pane-background {
+    -fx-background-color: linear-gradient(to bottom, rgba(33, 33, 33, 0.9) 0%, rgb(0, 0, 0) 100%);
+}
+.expand:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.arrow-effect:hover {
+    -fx-background-color: #676767;
+}
+.setting-pane:hover {
+    -fx-background-color: grey !important;
+}
+.history-property:hover {
+    -fx-background-color: #75da9d !important;
+}

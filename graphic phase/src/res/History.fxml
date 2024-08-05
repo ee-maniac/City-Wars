@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane focusTraversable="false" pannable="true" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.HistoryMenu">
+   <content>
+      <StackPane fx:id="root">
+         <children>
+            <ImageView fitHeight="1000.0" fitWidth="1420.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/—Pngtree—an%20old%20bookcase%20in%20a_2760144.jpg" />
+               </image>
+            </ImageView>
+            <BorderPane>
+               <top>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true" styleClass="expand">
+                           <image>
+                              <Image url="@img/arrow.png" />
+                           </image>
+                        </ImageView>
+                        <HBox>
+                           <children>
+                              <Label text="History" textFill="#b42071">
+                                 <font>
+                                    <Font name="System Bold Italic" size="65.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Region maxWidth="-Infinity" minWidth="-Infinity" prefWidth="600.0" style="-fx-border-width: 3; -fx-border-color: #b42071;" VBox.vgrow="ALWAYS" />
+                        <HBox style="-fx-background-color: yellow;">
+                           <children>
+                              <HBox maxWidth="-Infinity" minWidth="-Infinity" onMouseClicked="#setDate" prefWidth="200.0" styleClass="history-property">
+                                 <children>
+                                    <Label text="Date" textFill="#2fb3d0">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox maxWidth="-Infinity" minWidth="-Infinity" onMouseClicked="#setResult" prefWidth="200.0" styleClass="history-property">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label text="Result" textFill="#2fb3d0">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox maxWidth="-Infinity" minWidth="-Infinity" onMouseClicked="#setName" prefWidth="200.0" styleClass="history-property">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label text="Rival Name" textFill="#2fb3d0">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox maxHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#setLevel" prefWidth="200.0" styleClass="history-property">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label text="Rival Level" textFill="#2fb3d0">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox maxWidth="-Infinity" minWidth="-Infinity" onMouseClicked="#setAftermath" prefWidth="400.0" styleClass="history-property">
+                                 <children>
+                                    <Label text="Aftermath" textFill="#2fb3d0">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="180.0">
+                                 <children>
+                                    <ComboBox fx:id="orderCombo" promptText="order" style="-fx-background-color: #b1ff00;">
+                                       <items>
+                                          <FXCollections fx:factory="observableArrayList">
+                                             <String fx:value="ascending" />
+                                             <String fx:value="descending" />
+                                          </FXCollections>
+                                       </items>
+                                    </ComboBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </top>
+               <bottom>
+                  <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+                     <children>
+                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#previousPage" prefHeight="55.0" prefWidth="55.0">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/left-arrow.png" />
+                                 </image>
+                                 <StackPane.margin>
+                                    <Insets />
+                                 </StackPane.margin>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="arrow-effect" />
+                              <String fx:value="expand" />
+                           </styleClass>
+                        </StackPane>
+                        <Region layoutX="60.0" layoutY="10.0" HBox.hgrow="ALWAYS" />
+                        <StackPane layoutX="30.0" layoutY="359.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#nextPage" prefHeight="55.0" prefWidth="55.0">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/right-arrow.png" />
+                                 </image>
+                                 <StackPane.margin>
+                                    <Insets />
+                                 </StackPane.margin>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="arrow-effect" />
+                              <String fx:value="expand" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </StackPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="100.0" />
+                     </padding>
+                  </HBox>
+               </bottom>
+               <center>
+                  <VBox fx:id="historyHolder" spacing="10.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </content>
+</ScrollPane>

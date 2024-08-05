@@ -1,0 +1,144 @@
+.root {
+    -fx-font-family: 'Arial';
+    -fx-background-color: #34495e;
+}
+
+.start-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.start-button:hover {
+    -fx-background-color: #27ae60;
+}
+
+#roundNumber {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-padding: 25px 0 25px 0;
+}
+
+.player-area {
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+.player-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+}
+
+.board {
+    /* -fx-background-color: rgba(52, 152, 219, 0.3); */
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-spacing: 3;
+    -fx-alignment: center;
+    -fx-pref-height: 100;
+    -fx-min-height: 100;
+    -fx-max-height: 100;
+}
+
+#playerGameBoard {
+    -fx-padding: 40;
+}
+
+.hand {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-padding: 10;
+    /* -fx-pref-height: 100; */
+    /* -fx-min-height: 100;
+    -fx-max-height: 100; */
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+
+.card-slot {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-background-radius: 5;
+}
+
+.sector {
+    -fx-background-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.sector-info {
+    -fx-font-size: 12.5px;
+    -fx-text-fill: white;
+}
+
+.card-info {
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+}
+
+.score-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+.leftTurns-label {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-margin: 0 10px 0 0;
+    -fx-padding: 10;
+}
+
+.leftHP-label {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-margin: 0 0 0 10px;
+    -fx-padding: 10;
+}
+
+.side-container {
+    -fx-background-color: rgb(32, 176, 32);
+    -fx-background-radius: 10;
+    /* -fx-margin: 0 20px 0 20px; */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+    -fx-pref-width: 60;
+    -fx-min-width: 60;
+    -fx-max-width: 60;
+}
+
+.active-turn {
+    -fx-background-color: #a2e2bc;
+}
+
+#player1Area {
+    -fx-background-color: #3498db;
+}
+
+#player2Area {
+    -fx-background-color: #e74c3c;
+}
+
+#player1HandUI,
+#player2HandUI,
+#player1BoardUI,
+#player2BoardUI {
+    /* -fx-pref-height: 100;
+    -fx-min-height: 100;
+    -fx-max-height: 100; */
+}
+
+#player1HandUI {
+    -fx-background-color: #2980b9;
+}
+
+#player2HandUI {
+    -fx-background-color: #c0392b;
+}
